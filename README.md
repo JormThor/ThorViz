@@ -8,7 +8,7 @@ Thorchain Tokenomics Visualized.
 The ThorChain Community is amazing - we want to build, learn and share.
 Have ideas or find a bug? Let us know!
 
-**Twitter:** https://twitter.com/IanHensel
+**Twitter:** https://twitter.com/JormungandrThor 
 
 # Contributors
 Have an idea for a way to make this better?
