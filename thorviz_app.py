@@ -161,7 +161,6 @@ with col2:
     st.title('⚡⚡⚡ #RAISETHECAPS ⚡⚡⚡')
 
 with col3:
-    st.markdown("[![](coin_icons/btc_logo.png)](https://streamlit.io)")
     st.markdown("[Github](https://github.com/Cattleman/thor-viz)")
     st.markdown("[Twitter](https://twitter.com/JormungandrThor)")
 
