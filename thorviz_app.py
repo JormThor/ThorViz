@@ -129,7 +129,7 @@ with col1:
 
 with col2:
     st.title("ThorViz - Thorchain Tokenomics Dashboard")
-    st.title('⚡⚡⚡ #RAISETHECAPS ⚡⚡⚡')
+    st.title(' #RAISETHECAPS ⚡⚡⚡')
 
 with col3:
     st.markdown("[Github](https://github.com/JormThor/ThorViz)")
@@ -150,23 +150,36 @@ if st.button("➡️  I understand there could be bugs, let me in!"):
         # TODO can format all of these with a helper function later 
 
         # Total Pooled Rune
-        st.markdown(f'**Total Pooled Rune (MCCN + SCCN):** **ᚱ**{np.round(rune_dict["Rune_in_LP_count"], 2):,}')
+        st.markdown(f'**Total Pooled Rune (MCCN + SCCN):** **ᚱ** {np.round(rune_dict["Rune_in_LP_count"], 2):,}')
         # DUPLICATE
 #        st.button(f' TEST - Total Pooled Rune (MCCN + SCCN): ᚱ{np.round(rune_dict["Rune_in_LP_count"], 2):,}', help='tooltip_test')
         # Total Active Bonded Rune
-        st.markdown(f'**Total Active Bonded Rune:** **ᚱ**{np.round(rune_dict.get("Rune_bonded_count"), 2):,}')
+        st.markdown(f'**Total Active Bonded Rune:** **ᚱ** {np.round(rune_dict.get("Rune_bonded_count"), 2):,}')
         # In-Network Rune
-        st.markdown(f'**Total In-Network Rune:** **ᚱ**{np.round(rune_dict.get("total_in_network_count"), 2):,}')
+        st.markdown(f'**Total In-Network Rune:** **ᚱ** {np.round(rune_dict.get("total_in_network_count"), 2):,}')
         # Deterministic Value
-        st.markdown(f'**Total Deterministic Value:** **$**{np.round(rune_dict.get("deterministic_value_usd"), 2):,}')
+        st.markdown(f'**Total Deterministic Value:** **$** {np.round(rune_dict.get("deterministic_value_usd"), 2):,}')
         # Market Price 
-        st.markdown(f'**Market Price (USD):** **$**{np.round(rune_dict.get("market_price_usd"), 2):,} (source: FTX)')
+        st.markdown(f'**Market Price (USD):** **$** {np.round(rune_dict.get("market_price_usd"), 2):,} (source: FTX)')
         # Calculate Baseline Price
-        st.markdown(f'**Baseline Price (USD):** **$**{np.round(rune_dict.get("determined_price"), 2):,}')
-        st.markdown(f'**Speculation Premium (USD):** **$**{np.round(rune_dict.get("speculation_premium_usd"), 2) :,}')
+        st.markdown(f'**Baseline Price (USD):** **$** {np.round(rune_dict.get("determined_price"), 2):,}')
+        st.markdown(f'**Speculation Premium (USD):** **$** {np.round(rune_dict.get("speculation_premium_usd"), 2) :,}')
         st.markdown(f'**Speculation percentage of Market Price:** {np.round(rune_dict.get("speculation_pct_of_market") * 100 ,2)}%')
 
 
+
+    with st.beta_expander("Baseline Price - Show me the math! 📐🤔"):
+
+
+        st.latex("TotalRuneInNetwork = TotalPooledRune + TotalActiveBondedRune")
+
+        st.latex("DeterministicValue \, (USD) = TotalPooledRune * MarketPrice * 3")
+
+        st.latex(r"BaselinePrice \, (USD) = \frac{DeterministicValue}{TotalRuneInNetwork}")
+        st.latex("SpeculationPremium \, (USD) = MarketPrice - BaselinePrice")
+
+        st.latex(r"SpeculationPercentOfMarket \, (\%) = \frac{SpeculationPremium}{MarketPrice} * 100")
+    
 
 # ------------------------------ Trading View Chart ------------------------------
 
