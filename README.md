@@ -1,11 +1,11 @@
 # Thor-Viz
 
-Thorchain Tokenomics Visualized. 
+THORChain Tokenomics Visualized. 
 
 **Note:** This project is still in development.
 
 # Reach out!
-The ThorChain Community is amazing - we want to build, learn and share.
+The THORChain Community is amazing - we want to build, learn and share.
 Have ideas or find a bug? Let us know!
 
 **Twitter:** https://twitter.com/JormungandrThor 
@@ -13,7 +13,6 @@ Have ideas or find a bug? Let us know!
 # Contributors
 Have an idea for a way to make this better?
 PRs and issues are welcome!
-If it's good we'll send you Rune!
 
 # To Run locally 
 
@@ -29,7 +28,7 @@ If it's good we'll send you Rune!
 
 **2. Midgard Explorer:** [https://docs.thorchain.org/developers/midgard-api](https://docs.thorchain.org/developers/midgard-api)
 
-3. **Thorchain Network explorer:** [https://thorchain.net/#/](https://thorchain.net/#/)
+3. **THORChain Network explorer:** [https://thorchain.net/#/](https://thorchain.net/#/)
 
 4. **Better Midgard Docuentation:** [https://testnet.midgard.thorchain.info/v2/doc#operation/GetPools](https://testnet.midgard.thorchain.info/v2/doc#operation/GetPools) 
 
